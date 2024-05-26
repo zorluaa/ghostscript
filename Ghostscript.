@@ -1,0 +1,56 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("XHUB script hub", "DarkTheme")
+
+
+-- Main
+local Main = Window:NewTab("Main")
+local Section1 = Main:NewSection("Scripts")
+
+
+Section1:NewButton("Xhub assassin", "free autofarmin", function()
+
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/zorluaa/assassinxhub/main/xxx"), true))()
+end)
+
+Section1:NewToggle("be fast", "sonic speed", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 50
+    end
+end)
+
+Section1:NewButton("Xhub raceclickerfixed", "XhubRaceFixed", function()
+
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/zorluaa/raceclickerfixed/main/XhubRaceFixed"), true))()
+end)
+
+
+--LOCAL PLAYER
+local side = Window:NewTab("side")
+local Section2 = side:NewSection("Player")
+
+Section2:NewSlider("Walkspeed", "SPEED!!!!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section2:NewSlider("Jumpspeed", "JUMP!!!!", 300, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section2:NewButton("Reset WP/JP", "Reset to default settings", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+
+--OTHER
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+
+Section2:NewButton("Xhub autoparryfixed", "XhubautoFixed", function()
+    
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/urmumsihot/bladeball/main/bladeballxhub"), true))()
+end)
